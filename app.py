@@ -63,7 +63,8 @@ st.dataframe(my_dict)
 
 
 f=open('cab_model.pkl','rb')
-chatGPT = pk.load(f)
+chatGPT=pk.load(f)
+f.close()
 result = round(chatGPT.predict([to_predict])[0],1)
 
 
