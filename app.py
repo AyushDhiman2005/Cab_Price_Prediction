@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import pickle as pk
+import pickle 
 
 
 st.title("Cab Price Prediction")
@@ -63,7 +63,7 @@ st.dataframe(my_dict)
 
 
 with open('cab_model.pkl', 'rb') as f:
-    chatGPT = pk.load(f)
+    chatGPT = pickle.load(f)
 
 result = round(chatGPT.predict([to_predict])[0],1)
 
