@@ -62,9 +62,9 @@ for i in range(5):
 st.dataframe(my_dict)
 
 
-f=open('cab_model.pkl','rb')
-chatGPT=pk.load(f)
-f.close()
+with open('cab_model.pkl', 'rb') as f:
+    chatGPT = pk.load(f)
+
 result = round(chatGPT.predict([to_predict])[0],1)
 
 
