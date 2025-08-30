@@ -64,9 +64,9 @@ st.dataframe(my_dict)
 
 
 
-file_name = 'cab_model.pkl'
-with open(file_name, 'rb') as f:
-    chatGPT = pickle.load(f)
+
+f1=open('cab_model.pkl','rb')
+chatGPT = pickle.load(f1)
 
 result = round(chatGPT.predict([to_predict])[0],1)
 
